@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "The nextjs app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "author": "pathetic_geek",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "cacheable-response": "^1.6.12",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "firebase": "^6.2.4",
+    "next": "^8.1.0",
+    "next-images": "^1.1.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}

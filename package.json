@@ -1,0 +1,18 @@
+{
+  "name": "nextjs-bloat-firebase",
+  "version": "1.0.0",
+  "description": "Nothing to see here.",
+  "scripts": {
+    "install": "cd app && npm install && cd ../functions && npm install",
+    "dev": "cd app && npm run dev",
+    "cp-static": "rm -rf functions/static && cp -r app/static functions/static",
+    "prebuild": "npm run install",
+    "build": "npm run cp-static && cd app && npm run build",
+    "predeploy": "npm run build",
+    "deploy": "firebase deploy",
+    "preserve": "npm run build",
+    "serve": "firebase serve"
+  },
+  "author": "pathetic_geek",
+  "license": "ISC"
+}
