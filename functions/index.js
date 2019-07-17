@@ -31,10 +31,6 @@ server.get('/p/:id', async (req, res) => {
   return app.render(req, res, pagePath, queryParams);
 });
 
-server.get('/', async (req, res) => {
-  return dev ? handle(req, res) : ssrCache({ req, res });
-});
-
 server.get('*', async (req, res) => {
   return handle(req, res);
 });

@@ -7,11 +7,15 @@ class Index extends Component {
     return { id };
   }
 
-  state = { btnLoading: true, darkMode: false };
+  state = { btnLoading: false, darkMode: false };
 
   toggleDarkMode = () => {
     document.body.classList.toggle('dark');
     this.setState({ darkMode: !this.state.darkMode });
+  };
+
+  toggleBtnLoading = () => {
+    this.setState({ btnLoading: !this.state.btnLoading });
   };
 
   render() {
@@ -151,7 +155,7 @@ class Index extends Component {
 
             <button className='btn icon-only rounded-circle'>
               <span className='btn-icon'>
-                <i className='fab fa-instagram' />
+                <i className='fab fa-facebook' />
               </span>
             </button>
           </section>
@@ -339,6 +343,12 @@ class Index extends Component {
                     src='https://1si.org/app/uploads/2016/01/banner-placeholder.jpg'
                     alt='Card image placeholder'
                   />
+                  <div className='list-group'>
+                    <div className='list-item'>Something comes here</div>
+                    <div className='list-item'>Something comes here</div>
+                    <div className='list-item'>Something comes here</div>
+                    <div className='list-item'>Something comes here</div>
+                  </div>
                   <div className='card-body'>
                     <h2 className='card-title'>Card title</h2>
                     <p className='card-text'>
@@ -349,8 +359,40 @@ class Index extends Component {
                   </div>
                 </div>
 
+                <div className='card'>
+                  <img
+                    className='card-image-top'
+                    src='https://1si.org/app/uploads/2016/01/banner-placeholder.jpg'
+                    alt='Card image placeholder'
+                  />
+                  <div className='card-body'>
+                    <h2 className='card-title'>Card title</h2>
+                    <p className='card-text'>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, officia similique
+                      amet minima eveniet ducimus provident. Quis ducimus, incidunt repellat ullam ratione ea
+                      earum facilis. Deserunt harum illum nihil sapienterrore.
+                    </p>
+                  </div>
+                </div>
+
+                <div className='card bg-default text-white'>
+                  <div className='card-body'>
+                    <h2 className='card-title'>Testimonial</h2>
+                    <blockquote>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                      </p>
+                      <footer className='text-danger'>
+                        Someone famous in <cite title='Source Title'>Source Title</cite>
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+
+              <div className='col-33 col-sm'>
                 <div
-                  className='card text-black card-lift--hover'
+                  className='card text-black'
                   style={{
                     backgroundImage: 'url(https://1si.org/app/uploads/2016/01/banner-placeholder.jpg)'
                   }}
@@ -364,9 +406,6 @@ class Index extends Component {
                     </p>
                   </div>
                 </div>
-              </div>
-
-              <div className='col-33 col-sm'>
                 <div className='card'>
                   <div className='card-body'>
                     <h1 className='mb-0'>Card title comes here</h1>
@@ -392,9 +431,81 @@ class Index extends Component {
                     <div className='list-item'>Something comes here</div>
                   </div>
                 </div>
+
+                <div className='card bg-gradient-success text-white'>
+                  <div className='card-header'>
+                    <h2 className='text-uppercase text-center pv-1'>Bravo Plan</h2>
+                  </div>
+                  <div className='card-body text-center pv-1'>
+                    <div className='dp2'>$49</div>
+                    <span className='text-sm text-400'>per application</span>
+                    <ul>
+                      <li>
+                        <span className='icon rounded-circle bg-white text-muted icon-sm mr-1'>
+                          <i className='fas fa-terminal' />
+                        </span>
+                        Complete Documentation
+                      </li>
+                      <li>
+                        <span className='icon rounded-circle bg-white text-muted icon-sm mr-1'>
+                          <i className='fas fa-pen-fancy' />
+                        </span>
+                        Working materials in Sketch
+                      </li>
+                      <li>
+                        <span className='icon rounded-circle bg-white text-muted icon-sm mr-1'>
+                          <i className='fas fa-hdd' />
+                        </span>
+                        2Gb cloud storage
+                      </li>
+                    </ul>
+                    <button className='btn neutral mv-1'>Start free trial</button>
+                  </div>
+                  <div className='card-footer text-center'>
+                    <a href='#' className='text-400 text-white'>
+                      Request a demo
+                    </a>
+                  </div>
+                </div>
               </div>
 
               <div className='col-sm col-33'>
+                <div className='card'>
+                  <div className='card-header'>
+                    <h2 className='text-uppercase text-primary text-center pv-1'>Bravo Plan</h2>
+                  </div>
+                  <div className='card-body text-center pv-1'>
+                    <div className='dp2'>$49</div>
+                    <span className='text-sm text-400 text-muted'>per application</span>
+                    <ul>
+                      <li>
+                        <span className='icon rounded-circle bg-primary text-white icon-sm mr-1'>
+                          <i className='fas fa-terminal' />
+                        </span>
+                        Complete Documentation
+                      </li>
+                      <li>
+                        <span className='icon rounded-circle bg-primary text-white icon-sm mr-1'>
+                          <i className='fas fa-pen-fancy' />
+                        </span>
+                        Working materials in Sketch
+                      </li>
+                      <li>
+                        <span className='icon rounded-circle bg-primary text-white icon-sm mr-1'>
+                          <i className='fas fa-hdd' />
+                        </span>
+                        2Gb cloud storage
+                      </li>
+                    </ul>
+                    <button className='btn mv-1'>Start free trial</button>
+                  </div>
+                  <div className='card-footer text-center'>
+                    <a href='#' className='text-400 text-color'>
+                      Request a demo
+                    </a>
+                  </div>
+                </div>
+
                 <div className='card'>
                   <div className='card-header'>
                     <div className='row'>
@@ -447,7 +558,7 @@ class Index extends Component {
                 </div>
 
                 <div className='card'>
-                  <div className='card-body align-items-center'>
+                  <div className='card-body d-flex-column align-items-center'>
                     <a href='#' className='mb-1'>
                       <img
                         src={require('../assets/avatar.jpg')}
@@ -576,28 +687,10 @@ class Index extends Component {
                 </div>
               </div>
             </div>
-
-            <div className='row'>
-              <div className='col-sm col-33'>
-                <div className='card bg-default text-white'>
-                  <div className='card-body'>
-                    <h2 className='card-title'>Testimonial</h2>
-                    <blockquote>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-                      </p>
-                      <footer className='text-danger'>
-                        Someone famous in <cite title='Source Title'>Source Title</cite>
-                      </footer>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
           </section>
 
           <section>
-            <h1>Bandages</h1>
+            <h1>Badges</h1>
             <span className='badge'>Default</span>
             <span className='badge neutral'>Neutral</span>
             <span className='badge success'>Success</span>
