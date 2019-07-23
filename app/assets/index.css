@@ -192,7 +192,7 @@ a:last-child {
 }
 .badge.success {
   color: var(--success);
-  background-color: rgb(147, 231, 195);
+  background-color: rgb(184, 255, 224);
 }
 .badge.danger {
   color: var(--danger);
