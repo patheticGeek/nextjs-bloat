@@ -114,6 +114,7 @@ h4 > small,
 .dp4 > small {
   font-family: 'Open Sans', sans-serif;
   color: var(--muted);
+  font-size: 80%;
 }
 
 .small,
@@ -131,7 +132,7 @@ a {
   transition: 0.2s color ease-in;
 }
 a:hover {
-  color: #5e96e4;
+  opacity: 0.9;
 }
 a:first-child {
   margin-left: 0px;
@@ -342,6 +343,11 @@ button,
 .btn:last-child {
   margin-right: 0px;
 }
+button:active,
+.btn:active {
+  transform: translateY(0px);
+  opacity: 0.9;
+}
 .btn:disabled,
 button[disabled],
 .btn.disabled {
@@ -366,7 +372,7 @@ button[disabled],
 }
 body.dark .card {
   background-color: #151515;
-  box-shadow: 0 0 0.25rem 0 rgba(97, 97, 97, 0.27);
+  box-shadow: 0 0 0.1rem 0 rgba(136, 152, 170, 0.15);
 }
 .card .border-card {
   border: 1px solid var(--border-color);
@@ -1064,6 +1070,31 @@ img {
   display: none;
 }
 
+.loading {
+  margin: auto;
+  width: 70px;
+  text-align: center;
+}
+.loading > div {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: var(--primary);
+  -webkit-animation: loading-spinner 1.4s infinite ease-in-out both;
+  animation: loading-spinner 1.4s infinite ease-in-out both;
+}
+.loading > div:nth-child(1) {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+  margin-right: 6px;
+}
+.loading > div:nth-child(2) {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+  margin-right: 6px;
+}
+
 @media screen and (max-width: 768px) {
   .row {
     flex-wrap: wrap;
@@ -1092,11 +1123,35 @@ img {
   }
 }
 
-@keyframes loader {
+@keyframes loading {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loading-spinner {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes loading-spinner {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }

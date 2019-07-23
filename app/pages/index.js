@@ -331,6 +331,17 @@ class Index extends Component {
                 </div>
               </div>
             </div>
+
+            <h2 className='mt-1'>Loading</h2>
+            <div className='row'>
+              <div className='col-sm col-25'>
+                <div className='loading'>
+                  <div />
+                  <div />
+                  <div />
+                </div>
+              </div>
+            </div>
           </section>
 
           <section>
@@ -588,7 +599,7 @@ class Index extends Component {
 
             <div className='row'>
               <div className='col-sm col-25'>
-                <div className='card card-stats'>
+                <div className='card card-stats lift-hover'>
                   <div className='card-body'>
                     <div className='row'>
                       <div className='col'>
@@ -613,7 +624,7 @@ class Index extends Component {
               </div>
 
               <div className='col-sm col-25'>
-                <div className='card card-stats'>
+                <div className='card card-stats lift-hover'>
                   <div className='card-body'>
                     <div className='row'>
                       <div className='col'>
@@ -638,7 +649,7 @@ class Index extends Component {
               </div>
 
               <div className='col-sm col-25'>
-                <div className='card card-stats'>
+                <div className='card card-stats lift-hover'>
                   <div className='card-body'>
                     <div className='row'>
                       <div className='col'>
@@ -663,7 +674,7 @@ class Index extends Component {
               </div>
 
               <div className='col-sm col-25'>
-                <div className='card card-stats'>
+                <div className='card card-stats lift-hover'>
                   <div className='card-body'>
                     <div className='row'>
                       <div className='col'>

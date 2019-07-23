@@ -5,9 +5,9 @@
   "scripts": {
     "install": "cd app && npm install && cd ../functions && npm install",
     "dev": "cd app && npm run dev",
-    "cp-static": "rm -rf functions/static && cp -r app/static functions/static",
+    "cp-static": "rm -rf public/static && cp -r app/static public/static",
     "prebuild": "npm run install",
-    "build": "npm run cp-static && cd app && npm run build",
+    "build": "npm run cp-static && cd app && npm run build && cd ../ && cp functions/next/static/service-worker.js public/",
     "predeploy": "npm run build",
     "deploy": "firebase deploy",
     "preserve": "npm run build",

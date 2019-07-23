@@ -21,6 +21,12 @@ class MyApp extends App {
       <Container>
         <Head>
           <title>Nextjs bloat firebase</title>
+          <link rel='manifest' href='/static/manifest.json' />
+          <meta name='theme-color' content='#db5945' />
+          <meta name='description' content='A nextjs app base' />
+          <link rel='icon' sizes='128x128' href='icon-128.png' />
+          <link rel='apple-touch-icon' href='icon-256.png' />
+          <link rel='apple-touch-startup-image' href='icon-512.png' />
           <script src='https://kit.fontawesome.com/107be81bdd.js' />
         </Head>
         <Component {...pageProps} />

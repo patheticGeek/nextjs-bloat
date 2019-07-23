@@ -13,8 +13,8 @@ admin.initializeApp();
 
 const ssrCache = cacheableResponse({
   ttl: 1000 * 60 * 5, // 5min
-  get: async ({ req, res, pagePath, queryParams }) => ({
-    data: await app.renderToHTML(req, res, pagePath, queryParams)
+  get: async ({ req, res }) => ({
+    data: await app.renderToHTML(req, res)
   }),
   send: ({ data, res }) => res.send(data)
 });
@@ -28,12 +28,10 @@ server.use(compression());
 server.get('/p/:id', async (req, res) => {
   const pagePath = '/';
   const queryParams = { id: req.params.id };
-  return app.render(req, res, pagePath, queryParams);
+  return ssrCache({ req, res, pagePath, queryParams });
 });
 
-server.get('*', async (req, res) => {
-  return handle(req, res);
-});
+server.get('*', async (req, res) => handle(req, res));
 
 module.exports = {
   server: functions.https.onRequest(server)
