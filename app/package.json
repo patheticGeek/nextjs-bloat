@@ -15,7 +15,6 @@
     "cacheable-response": "^1.6.12",
     "compression": "^1.7.4",
     "express": "^4.17.1",
-    "firebase": "^6.2.4",
     "next": "^8.1.0",
     "next-images": "^1.1.2",
     "next-offline": "^4.0.2",
